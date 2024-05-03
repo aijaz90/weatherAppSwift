@@ -16,6 +16,10 @@ Note: from start it will fetch the current location weather and you can find the
 No third party libraries are used in this project.
 
 
+For weather data I have used this get API : https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m
+
+
+For API Documentation check this link: https://open-meteo.com/#
 
 
 
