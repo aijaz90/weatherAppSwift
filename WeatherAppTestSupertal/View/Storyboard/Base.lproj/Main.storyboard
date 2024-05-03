@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AdventPro-Light.ttf">
+            <string>AdventPro-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--WeatherVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="WeatherAppTestSupertal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-ie-3hT">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-sb-dMI" userLabel="Search City Stack View">
+                                <rect key="frame" x="39.333333333333343" y="119" width="314.33333333333326" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-cs-ABe">
+                                        <rect key="frame" x="0.0" y="0.0" width="254.66666666666666" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" systemColor="systemRedColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sa-px-6S5">
+                                        <rect key="frame" x="264.66666666666669" y="0.0" width="49.666666666666686" height="34"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
+                                        <connections>
+                                            <action selector="getWaetherDataButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hie-Mj-zEC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LTB-5G-7UL" userLabel="Weather Details Stack View">
+                                <rect key="frame" x="274.66666666666669" y="273" width="79" height="102"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0t-Nf-may">
+                                        <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B03-0J-7f1">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="50"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OhC-0n-aYo">
+                                                <rect key="frame" x="50" y="-3.5527136788005009e-15" width="29" height="50.333333333333329"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="light"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-iv-CTY">
+                                        <rect key="frame" x="0.0" y="52" width="79" height="50"/>
+                                        <fontDescription key="fontDescription" name="AdventPro-Light" family="Advent Pro" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="e6k-En-KKH">
+                                <rect key="frame" x="297.66666666666669" y="119" width="40" height="34"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.92653518359999998" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="mo4-ES-pLk"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-ap-9SE">
+                                <rect key="frame" x="39.333333333333329" y="213" width="210.33333333333337" height="40"/>
+                                <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="40"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7bb-ie-3hT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="24Q-vl-XRO"/>
+                            <constraint firstItem="e6k-En-KKH" firstAttribute="trailing" secondItem="2zV-sb-dMI" secondAttribute="trailing" constant="-16" id="2LD-DQ-SKz"/>
+                            <constraint firstItem="2zV-sb-dMI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="DBz-EP-Oes"/>
+                            <constraint firstAttribute="bottom" secondItem="7bb-ie-3hT" secondAttribute="bottom" id="Dcg-7g-kcJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7bb-ie-3hT" secondAttribute="trailing" id="MiJ-w1-Klo"/>
+                            <constraint firstItem="FoY-ap-9SE" firstAttribute="top" secondItem="2zV-sb-dMI" secondAttribute="bottom" constant="60" id="OfJ-ZW-KTt"/>
+                            <constraint firstItem="e6k-En-KKH" firstAttribute="top" secondItem="2zV-sb-dMI" secondAttribute="top" id="Ovt-Ds-Kvv"/>
+                            <constraint firstItem="2zV-sb-dMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="QyZ-zw-guh"/>
+                            <constraint firstItem="FoY-ap-9SE" firstAttribute="leading" secondItem="2zV-sb-dMI" secondAttribute="leading" id="RTS-Yz-JVJ"/>
+                            <constraint firstItem="e6k-En-KKH" firstAttribute="bottom" secondItem="2zV-sb-dMI" secondAttribute="bottom" id="TYN-cR-NlR"/>
+                            <constraint firstItem="7bb-ie-3hT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bpa-ub-5NS"/>
+                            <constraint firstItem="LTB-5G-7UL" firstAttribute="top" secondItem="FoY-ap-9SE" secondAttribute="bottom" constant="20" id="jEg-DE-td2"/>
+                            <constraint firstItem="2zV-sb-dMI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l6i-V3-L6g"/>
+                            <constraint firstItem="LTB-5G-7UL" firstAttribute="trailing" secondItem="2zV-sb-dMI" secondAttribute="trailing" id="rbi-ez-2iD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FoY-ap-9SE" secondAttribute="trailing" constant="16" id="vA7-IV-Pam"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="e6k-En-KKH" id="iIs-2E-SUT"/>
+                        <outlet property="cityNameLabel" destination="FoY-ap-9SE" id="Wgl-il-Bxi"/>
+                        <outlet property="cityNameTextField" destination="z6R-cs-ABe" id="Ycl-4J-XaT"/>
+                        <outlet property="searchButton" destination="4Sa-px-6S5" id="IaA-Ab-cre"/>
+                        <outlet property="weatherDescriptionLabel" destination="eF8-iv-CTY" id="CB1-ig-ne8"/>
+                        <outlet property="weatherIconImageView" destination="OhC-0n-aYo" id="xgO-jQ-yEl"/>
+                        <outlet property="weatherTempratureLabel" destination="B03-0J-7f1" id="S9v-Z5-Ncg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="188" height="376"/>
+        <image name="cloud" catalog="system" width="128" height="87"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
